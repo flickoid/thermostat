@@ -41,6 +41,12 @@ describe("Thermostat", function() {
       thermostat.reset();
       expect(thermostat.temperature).toEqual(20);
     });
+
+    it("should be able to reset Power Saving Mode to on", function() {
+      thermostat.powerSavingMode = false;
+      thermostat.reset();
+      expect(thermostat.powerSavingMode).toBe(true);
+    });
   });
 
   describe("when Power Saving Mode is on", function() {
